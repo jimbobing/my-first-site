@@ -1,0 +1,146 @@
+/* Base */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Arial, Helvetica, sans-serif;
+  background: #ffffff;             /* light gray-blue */
+  color: #0f172a;                   /* dark slate */
+  line-height: 1.6;
+}
+
+/* Layout */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Container for side-by-side sections */
+.sections-row {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.sections-row section {
+  flex: 1;
+  margin: 0;
+}
+header, footer {
+  text-align: center;
+  padding: 5rem 1rem;
+}
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('./images/profile.jpg') center 60%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid black;
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+footer { color: #64748b; }
+
+/* Sections */
+section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+/* Shared styles for special sections */
+.special-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.special-section h2 {
+  color: #000000;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.special-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.special-section li {
+  background: white;
+  margin: 0.75rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #ffffff;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.special-section li:hover {
+  transform: translateX(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-left-color: #8b5cf6;
+}
+
+/* Special styling for the hobbies section */
+/* Note: Most styles are inherited from .special-section */
+
+/* Books section specific styles */
+.book-into-the-magic-shop::before {
+  content: "🪄";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.book-sapiens::before {
+  content: "🐒";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.book-shantaram::before {
+  content: "🌍";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Individual emojis for each hobby */
+.hobby-surfing::before {
+  content: "🌊";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.hobby-eating::before {
+  content: "🥘";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.hobby-sleeping::before {
+  content: "💤";
+  margin-right: 0.75rem;
+  font-size: 1.1rem;
+}
+
+/* Base typography */
+h1 { margin: 0 0 .25rem; font-size: 2rem; }
+h2 { margin: 0 0 .5rem; }
+
+/* Links */
+a { color: #3b82f6; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Mobile tweak */
+@media (max-width: 480px) {
+  h1 { font-size: 1.7rem; }
+  img { width: 130px; height: 130px; }
+}
